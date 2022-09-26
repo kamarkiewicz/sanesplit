@@ -18,7 +18,7 @@
   "jest": {
     "testRunner": "jest-circus/runner",
     "collectCoverageFrom": [
-      "index.js"
+      "lib/**/*.{js,jsx}"
     ]
   },
   "repository": {
