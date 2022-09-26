@@ -1,0 +1,57 @@
+{
+  "name": "sanesplit",
+  "version": "1.0.0",
+  "description": "Sane split useful for storing large MongoDB documents",
+  "main": "lib/split.js",
+  "scripts": {
+    "test": "standard && jest --coverage",
+    "fix": "standard --fix",
+    "fuzz": "jsfuzz --timeout=120 test/split.fuzz.js corpus",
+    "bench": "node test/split.bench.js"
+  },
+  "standard": {
+    "env": [
+      "node",
+      "jest"
+    ]
+  },
+  "jest": {
+    "testRunner": "jest-circus/runner",
+    "collectCoverageFrom": [
+      "index.js"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/kamarkiewicz/sanesplit.git"
+  },
+  "keywords": [
+    "sane",
+    "split",
+    "deepsplit",
+    "merge",
+    "deepmerge",
+    "mongodb",
+    "bson"
+  ],
+  "author": "Kamil Markiewicz <k.a.markiewicz@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/kamarkiewicz/sanesplit/issues"
+  },
+  "homepage": "https://gitlab.com/kamarkiewicz/sanesplit#readme",
+  "devDependencies": {
+    "@gitlab-org/jsfuzz": "^1.0.15",
+    "benny": "^3.6.15",
+    "jest": "^27.2.2",
+    "jest-circus": "^27.2.2",
+    "lodash": "^4.17.21",
+    "node-random-json": "0.0.1",
+    "seedrandom": "^3.0.5",
+    "standard": "^16.0.3"
+  },
+  "dependencies": {
+    "bson": "^4.5.2",
+    "deepmerge": "^4.2.2"
+  }
+}
