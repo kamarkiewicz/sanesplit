@@ -6,7 +6,7 @@
   "scripts": {
     "test": "standard && jest --coverage",
     "fix": "standard --fix",
-    "fuzz": "jsfuzz --timeout=120 test/split.fuzz.js corpus",
+    "fuzz": "jazzer --sync test/split.fuzz.js corpus -- -max_total_time=120",
     "bench": "node test/split.bench.js"
   },
   "standard": {
@@ -41,7 +41,7 @@
   },
   "homepage": "https://gitlab.com/kamarkiewicz/sanesplit#readme",
   "devDependencies": {
-    "@gitlab-org/jsfuzz": "^1.2.4",
+    "@jazzer.js/core": "^4.0.0",
     "benny": "^3.7.1",
     "jest": "^30.3.0",
     "jest-circus": "^30.3.0",

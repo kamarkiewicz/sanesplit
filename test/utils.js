@@ -12,7 +12,7 @@ const randomJson = require('node-random-json')({
 })
 
 function generateRandomJson (bytes) {
-  const seed = String.fromCodePoint(...bytes)
+  const seed = Buffer.from(bytes).toString('base64')
   seedrandom(seed, { global: true })
   return randomJson('Object')
 }
